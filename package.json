@@ -1,0 +1,24 @@
+{
+    "name": "alura-case",
+    "type": "module",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint . --fix",
+        "build:css": "sass src/sass:src/dist/css --no-source-map",
+        "watch:css": "sass --watch src/sass:src/dist/css",
+        "build": "npm run lint && npm run build:css"
+    },
+    "author": "Livia Helen",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@eslint/js": "^9.9.1",
+        "eslint": "^9.9.1",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "globals": "^15.9.0",
+        "prettier": "^3.3.3"
+    }
+}
