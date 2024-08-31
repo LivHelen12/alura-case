@@ -1,0 +1,16 @@
+$background-primary: hsl(271, 86%, 6%);
+$background-secondary: hsl(270, 67%, 9%);
+$background-container: hsl(267, 51%, 18%);
+
+$font-color-primary: hsl(245, 17%, 60%);
+$font-color-secondary: hsl(0, 0%, 100%);
+$font-color-third: hsl(245, 35%, 88%);
+
+$border-color-primary: hsl(274, 27%, 40%);
+$border-color-secondary: hsl(299, 100%, 67%);
+
+$password-force: (
+    'failed': hsl(353, 81%, 51%),
+    'warning': hsl(59, 96%, 51%),
+    'strong': hsl(151, 100%, 50%),
+);
