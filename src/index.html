@@ -8,20 +8,20 @@
     </head>
     <body>
         <div class="container">
-            <header class="container__header">
+            <header class="header">
                 <img src="./assets/unlock.svg" alt="Ícone de cadeado" />
                 <h2>Gerador de senhas</h2>
                 <p>Gere instantaneamente uma senha aleatória e segura</p>
             </header>
 
-            <main class="main">
-                <header class="main__header">
-                    <div class="main__header__password">
+            <main>
+                <div class="card_password">
+                    <div class="password">
                         <span>senha</span>
                         <span>zcBLsNGX2616</span>
                     </div>
 
-                    <div class="main__header__icons">
+                    <div class="icons">
                         <button>
                             <img
                                 src="./assets/copy.svg"
@@ -36,26 +36,25 @@
                             />
                         </button>
                     </div>
-                </header>
+                </div>
 
-                <div class="main__custom__password">
+                <div class="custom_password">
                     <p>Personalize sua senha</p>
 
-                    <div class="main__custom__password__settings">
-                        <div class="main__custom__password__settings__1">
+                    <div class="settings_password">
+                        <div class="range">
                             <p>Número de caracteres</p>
                             <input
-                                class="main__custom__password__settings__1__range"
                                 type="range"
                                 name="slider"
                                 id="slider"
                                 min="6"
                                 max="30"
                             />
-                            <div>12</div>
+                            <span>12</span>
                         </div>
 
-                        <div class="main__custom__password__settings__2">
+                        <div class="characters">
                             <p>Características da senha</p>
 
                             <div>
@@ -97,14 +96,10 @@
                             </div>
                         </div>
 
-                        <div class="main__custom__password__settings__3">
+                        <div class="force">
                             <p>Força da senha</p>
-                            <div
-                                class="main__custom__password__settings__3__teste"
-                            ></div>
-                            <div
-                                class="main__custom__password__settings__3__teste2"
-                            >
+                            <div class="force_box"></div>
+                            <div class="force_description">
                                 <span>Fraca</span>
                                 <span>Média</span>
                                 <span>Forte</span>
@@ -114,7 +109,7 @@
                 </div>
             </main>
 
-            <footer>
+            <footer class="footer">
                 <button>Copiar senha</button>
             </footer>
         </div>

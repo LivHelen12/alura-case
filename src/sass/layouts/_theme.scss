@@ -1,0 +1,16 @@
+@use '../abstracts/index' as *;
+
+html {
+    background-color: $background-primary;
+    font-family: $roboto;
+    color: $font-color-secondary;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:has(img) {
+    background: transparent;
+    border: none;
+}
