@@ -18,7 +18,7 @@
     }
 }
 
-@include xs {
+@include media(xs) {
     .header {
         img {
             width: 2.4rem;

@@ -18,46 +18,13 @@
     }
 }
 
-@include xs {
+@include media(xs, sm, md, lg) {
     .footer {
         padding: 0 0 6rem 0;
 
         button {
             padding: 1rem;
-            font-size: 1.6rem;
-        }
-    }
-}
-
-@include sm {
-    .footer {
-        padding: 0 0 6rem 0;
-
-        button {
-            padding: 1rem;
-            font-size: 1.6rem;
-        }
-    }
-}
-
-@include md {
-    .footer {
-        padding: 0 0 6rem 0;
-
-        button {
-            padding: 1rem;
-            font-size: 2rem;
-        }
-    }
-}
-
-@include lg {
-    .footer {
-        padding: 0 0 6rem 0;
-
-        button {
-            padding: 1rem;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
     }
 }

@@ -8,25 +8,13 @@
     padding: 8rem 18rem;
 }
 
-@include xs {
+@include media(xs, sm) {
     .container {
         padding: 6rem 2rem;
     }
 }
 
-@include sm {
-    .container {
-        padding: 6rem 2rem;
-    }
-}
-
-@include md {
-    .container {
-        padding: 8rem 6rem;
-    }
-}
-
-@include lg {
+@include media(md, lg) {
     .container {
         padding: 8rem 6rem;
     }
