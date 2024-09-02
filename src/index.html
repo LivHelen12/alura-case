@@ -1,117 +1,91 @@
 <!doctype html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./dist/css/style.css" />
-        <title>Gerador de Senha</title>
-    </head>
-    <body>
-        <div class="container">
-            <header class="header">
-                <img src="./assets/unlock.svg" alt="Ícone de cadeado" />
-                <h2>Gerador de senhas</h2>
-                <p>Gere instantaneamente uma senha aleatória e segura</p>
-            </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/unlock.ico" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <title>Gerador de Senha</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="./assets/unlock.svg" alt="Ícone de cadeado" />
+        <h2>Gerador de senhas</h2>
+        <p>Gere instantaneamente uma senha aleatória e segura</p>
+      </header>
 
-            <main>
-                <div class="card_password">
-                    <div class="password">
-                        <span>senha</span>
-                        <span>zcBLsNGX2616</span>
-                    </div>
+      <main>
+        <div class="card_password">
+          <div class="password">
+            <span>senha</span>
+            <span>zcBLsNGX2616zcBLsNGX2616</span>
+          </div>
 
-                    <div class="icons">
-                        <button>
-                            <img
-                                src="./assets/copy.svg"
-                                alt="Botão de copiar a senha"
-                            />
-                        </button>
+          <div class="icons">
+            <button>
+              <img src="./assets/copy.svg" alt="Botão de copiar a senha" />
+            </button>
 
-                        <button>
-                            <img
-                                src="./assets/refresh-cw.svg"
-                                alt="Botão de gerar uma nova senha"
-                            />
-                        </button>
-                    </div>
-                </div>
-
-                <div class="custom_password">
-                    <p>Personalize sua senha</p>
-
-                    <div class="settings_password">
-                        <div class="range">
-                            <p>Número de caracteres</p>
-                            <input
-                                type="range"
-                                name="slider"
-                                id="slider"
-                                min="6"
-                                max="30"
-                            />
-                            <span>12</span>
-                        </div>
-
-                        <div class="characters">
-                            <p>Características da senha</p>
-
-                            <div>
-                                <input
-                                    type="checkbox"
-                                    name="uppercase"
-                                    id="uppercase"
-                                />
-                                <label for="uppercase">
-                                    Letras maiúsculas
-                                </label>
-                            </div>
-
-                            <div>
-                                <input
-                                    type="checkbox"
-                                    name="lowercase"
-                                    id="lowercase"
-                                />
-                                <label for="lowercase">Letras minúsculas</label>
-                            </div>
-
-                            <div>
-                                <input
-                                    type="checkbox"
-                                    name="number"
-                                    id="number"
-                                />
-                                <label for="number"> Números </label>
-                            </div>
-
-                            <div>
-                                <input
-                                    type="checkbox"
-                                    name="symbols"
-                                    id="symbols"
-                                />
-                                <label for="symbols"> Símbolos </label>
-                            </div>
-                        </div>
-
-                        <div class="force">
-                            <p>Força da senha</p>
-                            <div class="force_box"></div>
-                            <div class="force_description">
-                                <span>Fraca</span>
-                                <span>Média</span>
-                                <span>Forte</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <footer class="footer">
-                <button>Copiar senha</button>
-            </footer>
+            <button>
+              <img
+                src="./assets/refresh-cw.svg"
+                alt="Botão de gerar uma nova senha"
+              />
+            </button>
+          </div>
         </div>
-    </body>
+
+        <div class="custom_password">
+          <p>Personalize sua senha</p>
+
+          <div class="settings_password">
+            <div class="range">
+              <p>Número de caracteres</p>
+              <input type="range" name="slider" id="slider" min="6" max="30" />
+              <span>12</span>
+            </div>
+
+            <div class="characters">
+              <p>Características da senha</p>
+
+              <div>
+                <input type="checkbox" name="uppercase" id="uppercase" />
+                <label for="uppercase"> Letras maiúsculas </label>
+              </div>
+
+              <div>
+                <input type="checkbox" name="lowercase" id="lowercase" />
+                <label for="lowercase">Letras minúsculas</label>
+              </div>
+
+              <div>
+                <input type="checkbox" name="number" id="number" />
+                <label for="number"> Números </label>
+              </div>
+
+              <div>
+                <input type="checkbox" name="symbols" id="symbols" />
+                <label for="symbols"> Símbolos </label>
+              </div>
+            </div>
+
+            <div class="force">
+              <p>Força da senha</p>
+              <div class="force_box"></div>
+              <div class="force_description">
+                <span>Fraca</span>
+                <span>Média</span>
+                <span>Forte</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <button>Copiar senha</button>
+      </footer>
+    </div>
+  </body>
 </html>
