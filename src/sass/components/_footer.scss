@@ -1,30 +1,30 @@
 @use '../abstracts/index' as *;
 
 .footer {
-    margin-top: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    button {
-        background-color: $border-color-secondary;
-        color: $background-primary;
+  button {
+    background-color: $border-color-secondary;
+    color: $background-primary;
 
-        padding: 1rem 1.2rem;
+    padding: 1rem 1.2rem;
 
-        font-size: 2.2rem;
-        border: none;
-        border-radius: 0.2rem;
-    }
+    font-size: 2.2rem;
+    border: none;
+    border-radius: 0.2rem;
+  }
 }
 
 @include media(xs, sm, md, lg) {
-    .footer {
-        padding: 0 0 6rem 0;
+  .footer {
+    padding: 0 0 6rem 0;
 
-        button {
-            padding: 1rem;
-            font-size: 1.8rem;
-        }
+    button {
+      padding: 1rem;
+      font-size: 1.8rem;
     }
+  }
 }

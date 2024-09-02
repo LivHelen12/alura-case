@@ -1,39 +1,39 @@
 @use '../abstracts/index' as *;
 
 label {
-    font-size: 2rem;
-    color: $font-color-primary;
-    cursor: pointer;
-    display: flex;
+  font-size: 2rem;
+  color: $font-color-primary;
+  cursor: pointer;
+  display: flex;
 }
 
 label::before {
-    content: '';
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.2rem;
-    margin-right: 1rem;
-    border: 0.1rem solid $border-color-primary;
-    background-color: $background-container;
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  margin-right: 1rem;
+  border: 0.1rem solid $border-color-primary;
+  background-color: $background-container;
 }
 
 input[type='checkbox'] {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
 }
 
 input[type='checkbox']:checked + label::before {
-    content: url('../../assets/check.svg');
-    background-color: $color-white;
+  content: url('../../assets/check.svg');
+  background-color: $color-white;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-black;
 }
 
 label:hover::before,
 input[type='checkbox']:hover + label::before {
-    background-color: $background-primary;
+  background-color: $background-primary;
 }
