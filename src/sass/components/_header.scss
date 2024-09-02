@@ -1,0 +1,45 @@
+@use '../abstracts/index' as *;
+
+.header {
+  text-align: center;
+  margin-bottom: 5.7rem;
+
+  img {
+    width: 3.7rem;
+    height: 3.7rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-family: $roboto-mono;
+    line-height: 5rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+@include media(sm, md) {
+  .header {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include media(lg, xl) {
+  .header {
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    p {
+      font-size: 2.4rem;
+    }
+  }
+}

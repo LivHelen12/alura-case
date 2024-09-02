@@ -1,0 +1,21 @@
+@use '../abstracts/index' as *;
+
+.container {
+  width: 100%;
+  max-width: 140rem;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 6rem 3rem;
+}
+
+@include media(md) {
+  .container {
+    padding: 8rem 6rem;
+  }
+}
+
+@include media(lg, xl) {
+  .container {
+    padding: 8rem 18rem;
+  }
+}
