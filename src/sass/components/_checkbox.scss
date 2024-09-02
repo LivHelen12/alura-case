@@ -25,12 +25,12 @@ input[type='checkbox'] {
 
 input[type='checkbox']:checked + label::before {
     content: url('../../assets/check.svg');
-    background-color: $background-color-white;
+    background-color: $color-white;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $background-color-black;
+    color: $color-black;
 }
 
 label:hover::before,

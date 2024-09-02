@@ -1,18 +1,18 @@
-$background-primary: hsl(271, 86%, 6%);
-$background-secondary: hsl(270, 67%, 9%);
-$background-container: hsl(267, 51%, 18%);
-$background-color-white: hsl(0, 0%, 100%);
-$background-color-black: hsl(0, 0%, 0%);
+$color-white: #fff;
+$color-black: #000;
 
-$font-color-primary: hsl(245, 17%, 60%);
-$font-color-secondary: hsl(0, 0%, 100%);
-$font-color-third: hsl(245, 35%, 88%);
+$background-primary: #0f021b;
+$background-secondary: #180828;
+$background-container: #2c1746;
 
-$border-color-primary: hsl(274, 27%, 40%);
-$border-color-secondary: hsl(299, 100%, 67%);
+$font-color-primary: #8a87aa;
+$font-color-third: #d7d5eb;
+
+$border-color-primary: #694a81;
+$border-color-secondary: #fd58ff;
 
 $password-force: (
-    'failed': hsl(353, 81%, 51%),
-    'warning': hsl(59, 96%, 51%),
-    'strong': hsl(151, 100%, 50%),
+    'failed': #e71b32,
+    'warning': #faf408,
+    'strong': #00ff85,
 );
