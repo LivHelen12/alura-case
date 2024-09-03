@@ -35,6 +35,6 @@ input[type='checkbox']:checked + label::before {
 }
 
 label:hover::before,
-input[type='checkbox']:hover + label::before {
+input[type='checkbox']:not(:checked):hover + label::before {
   background-color: $background-primary;
 }
