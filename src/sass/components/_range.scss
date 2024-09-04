@@ -1,40 +1,30 @@
 @use '../abstracts/index' as *;
 
-input[type='range'] {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 1rem;
-  background: linear-gradient(
-    to right,
-    $color-white 0%,
-    $color-white 50%,
-    $background-container 50%,
-    $background-container 100%
-  );
-  border-radius: 0.5rem;
-  outline: none;
-  cursor: pointer;
-
-  &::-webkit-slider-runnable-track {
-    height: 0.6rem;
-  }
-
-  &::-webkit-slider-thumb {
+.range {
+  input[type='range'] {
+    background: $background-container;
+    height: 20px;
+    transition: background 450ms ease-in;
     -webkit-appearance: none;
     appearance: none;
-    width: 3rem;
-    height: 3rem;
-    background: $color-white;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-top: -1.2rem;
-  }
+    border-radius: 25px;
 
-  &::-moz-range-thumb {
-    width: 3rem;
-    height: 3rem;
-    background: $color-white;
-    border-radius: 50%;
-    cursor: pointer;
+    &::-webkit-slider-thumb {
+      cursor: pointer;
+      appearance: none;
+      height: 35px;
+      width: 35px;
+      background-color: $color-white;
+      border-radius: 50%;
+    }
+
+    &::-moz-slider-thumb {
+      cursor: pointer;
+      appearance: none;
+      height: 35px;
+      width: 35px;
+      background-color: $color-white;
+      border-radius: 50%;
+    }
   }
 }

@@ -19,15 +19,15 @@
         <div class="card_password divider">
           <div class="password">
             <span>senha</span>
-            <span>zcBLsNGX2616zcBLsNGX2616</span>
+            <span id="generated_password"></span>
           </div>
 
           <div class="icons">
-            <button>
+            <button onclick="copyPassword()">
               <img src="./assets/copy.svg" alt="Botão de copiar a senha" />
             </button>
 
-            <button>
+            <button onclick="generatePassword()">
               <img
                 src="./assets/refresh-cw.svg"
                 alt="Botão de gerar uma nova senha"
@@ -40,32 +40,61 @@
           <p class="divider">Personalize sua senha</p>
 
           <div class="settings_password">
-            <div class="range">
+            <div class="range" id="password_length">
               <p>Número de caracteres</p>
-              <input type="range" name="slider" id="slider" min="6" max="30" />
-              <span>12</span>
+              <input
+                type="range"
+                name="slider"
+                class="slider"
+                id="slider"
+                min="8"
+                max="24"
+              />
+              <span id="box-range"></span>
             </div>
 
             <div class="characters">
               <p>Características da senha</p>
 
               <div>
-                <input type="checkbox" name="uppercase" id="uppercase" />
+                <input
+                  type="checkbox"
+                  name="uppercase"
+                  class="checkbox"
+                  id="uppercase"
+                  checked
+                />
                 <label for="uppercase"> Letras maiúsculas </label>
               </div>
 
               <div>
-                <input type="checkbox" name="lowercase" id="lowercase" />
+                <input
+                  type="checkbox"
+                  name="lowercase"
+                  class="checkbox"
+                  id="lowercase"
+                  checked
+                />
                 <label for="lowercase">Letras minúsculas</label>
               </div>
 
               <div>
-                <input type="checkbox" name="number" id="number" />
+                <input
+                  type="checkbox"
+                  name="number"
+                  class="checkbox"
+                  id="number"
+                />
                 <label for="number"> Números </label>
               </div>
 
               <div>
-                <input type="checkbox" name="symbols" id="symbols" />
+                <input
+                  type="checkbox"
+                  name="symbols"
+                  class="checkbox"
+                  id="symbols"
+                />
                 <label for="symbols"> Símbolos </label>
               </div>
             </div>
@@ -84,8 +113,14 @@
       </main>
 
       <footer class="footer">
-        <button>Copiar senha</button>
+        <button onclick="copyPassword()">Copiar senha</button>
       </footer>
+
+      <div class="notification">
+        <span>Senha copiada com sucesso</span>
+      </div>
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>

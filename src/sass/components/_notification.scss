@@ -1,0 +1,32 @@
+@use '../abstracts/index' as *;
+
+.notification {
+  width: 25rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+
+  background-color: map-get($password-force, 'strong');
+  color: $color-black;
+  border-radius: 0.4rem;
+  text-align: center;
+  
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+  
+  transition: opacity 0.5s ease-in-out;
+
+  &.show {
+    opacity: 0.6;
+  }
+}
+
+@include media(sm, md, lg, xl) {
+  .notification {
+    top: 3%;
+    left: 75%;
+  }
+}
