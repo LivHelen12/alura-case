@@ -44,8 +44,11 @@ function setPassword() {
   }
 
   if (!baseChars || baseChars.length === '') {
-    return (spanPasswordEl.textContent = 'Personalize sua senha antes');
+    spanPasswordEl.classList.add("error");
+    return spanPasswordEl.textContent = "Personalize sua senha antes de gerar 🤖";
   }
+
+  spanPasswordEl.classList.remove("error");
 
   for (let i = 0; i < passwordLength; i++) {
     const randomNumber = Math.floor(Math.random() * baseChars.length);
