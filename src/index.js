@@ -92,6 +92,13 @@ function resetPassBeforeGenerate() {
 }
 
 function copyPassword() {
+  const notificationEl = document.querySelector('.notification');
+  notificationEl.classList.add("show");
+
+  setTimeout(() => {
+  notificationEl.classList.remove("show");
+  }, 1200);
+
   return navigator.clipboard.writeText(spanPasswordEl.textContent);
 }
 
