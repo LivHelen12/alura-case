@@ -76,6 +76,10 @@ Se você estiver utilizando o `VSCode` é recomendado instalar as extensões des
 ## Visualização do projeto
 O gerador de senhas também está funcionando para mobile.
 
+
+https://github.com/user-attachments/assets/130526ea-b489-4300-80d8-6263d438d5ef
+
+
 ## Backlog
 
 Para a organização do projeto, eu optei por criar um backlog com as tarefas que precisavam ser feitas. Utilizei o Github Projetos, [você pode visualizar meu backlog clicando aqui](https://github.com/users/LivHelen12/projects/1/views/1).
