@@ -44,11 +44,12 @@ function setPassword() {
   }
 
   if (!baseChars || baseChars.length === '') {
-    spanPasswordEl.classList.add("error");
-    return spanPasswordEl.textContent = "Personalize sua senha antes de gerar 🤖";
+    spanPasswordEl.classList.add('error');
+    return (spanPasswordEl.textContent =
+      'Personalize sua senha antes de gerar 🤖');
   }
 
-  spanPasswordEl.classList.remove("error");
+  spanPasswordEl.classList.remove('error');
 
   for (let i = 0; i < passwordLength; i++) {
     const randomNumber = Math.floor(Math.random() * baseChars.length);
@@ -65,7 +66,7 @@ function calculatePasswordForce() {
     if (checkbox.checked) {
       checkedCount++;
     }
-  })
+  });
 
   forceIndicatorEl.classList.remove('low', 'medium', 'strong');
   const DEFAULT_PASSWORD_LENGTH = 12;
@@ -93,10 +94,10 @@ function resetPassBeforeGenerate() {
 
 function copyPassword() {
   const notificationEl = document.querySelector('.notification');
-  notificationEl.classList.add("show");
+  notificationEl.classList.add('show');
 
   setTimeout(() => {
-  notificationEl.classList.remove("show");
+    notificationEl.classList.remove('show');
   }, 1200);
 
   return navigator.clipboard.writeText(spanPasswordEl.textContent);
@@ -111,11 +112,11 @@ inputRangeSliderEl.addEventListener('input', () => {
   setInputRangerValue();
   calculatePasswordForce();
   generatePassword();
-})
+});
 
 checkboxesEl.forEach((checkbox) => {
   checkbox.addEventListener('change', calculatePasswordForce);
-})
+});
 
 checkboxUppercaseEl.addEventListener('click', generatePassword);
 checkboxLowercaseEl.addEventListener('click', generatePassword);
