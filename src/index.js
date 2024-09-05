@@ -52,7 +52,7 @@ const setPassword = () => {
   if (!baseChars) {
     spanPasswordEl.classList.add('error');
     return (spanPasswordEl.textContent =
-      'Personalize sua senha antes de gerar 🤖');
+      'Personalize sua senha antes 🤖');
   }
 
   spanPasswordEl.classList.remove('error');
