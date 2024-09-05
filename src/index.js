@@ -17,14 +17,14 @@ const CHAR_SETS = {
   uppercase: 'ABCÇDEFGHIJKLMNOPQRSTUVWXYZ',
   number: '0123456789',
   symbol: '!#$%&()*+,-./:;<=>?@[]^_{|}',
-}
+};
 
 const generatePassword = () => {
   resetPassBeforeGenerate();
   setInputRangerValue();
   setPassword();
   calculatePasswordForce();
-}
+};
 
 const setBaseChars = () => {
   baseChars = '';
@@ -44,11 +44,11 @@ const setBaseChars = () => {
   if (checkboxSymbolEl.checked) {
     baseChars += CHAR_SETS.symbol;
   }
-}
+};
 
 const setPassword = () => {
   setBaseChars();
-      
+
   if (!baseChars) {
     spanPasswordEl.classList.add('error');
     return (spanPasswordEl.textContent =
@@ -63,10 +63,12 @@ const setPassword = () => {
   }
 
   spanPasswordEl.textContent = password;
-}
+};
 
 const calculatePasswordForce = () => {
-  const checkedCount = Array.from(checkboxesEl).filter(checkbox => checkbox.checked).length;
+  const checkedCount = Array.from(checkboxesEl).filter(
+    (checkbox) => checkbox.checked
+  ).length;
 
   forceIndicatorEl.classList.remove('low', 'medium', 'strong');
 
@@ -84,11 +86,11 @@ const calculatePasswordForce = () => {
   } else {
     forceIndicatorEl.classList.add('strong');
   }
-}
+};
 
 const copyPassword = () => {
   const notificationEl = document.querySelector('.notification');
-  
+
   notificationEl.classList.add('show');
 
   setTimeout(() => {
@@ -96,16 +98,16 @@ const copyPassword = () => {
   }, 1200);
 
   return navigator.clipboard.writeText(spanPasswordEl.textContent);
-}
+};
 
 const resetPassBeforeGenerate = () => {
   password = '';
-}
+};
 
 const setInputRangerValue = () => {
   passwordLength = inputRangeSliderEl.value;
   boxRangeSliderEl.textContent = passwordLength;
-}
+};
 
 inputRangeSliderEl.addEventListener('input', () => {
   setInputRangerValue();
