@@ -5,6 +5,7 @@
 2. [Pré-requisitos](#pré-requisitos)
     1. [Instalação do projeto](#instalação-do-projeto)
     2. [Instruções de uso](#instruções-de-uso)
+    3. [Tecnologias adicionais](#tecnologias-adicionais)
 3. [Visualização do projeto](#visualização-do-projeto)
 4. [Backlog](#backlog)
 5. [Aprendizados](#aprendizados)
@@ -45,7 +46,7 @@ Para conseguir rodar o projeto localmente na sua máquina, é necessário seguir
 1. É preciso clonar o repositório do projeto
 
 ```git
-git clone 
+git clone https://github.com/LivHelen12/alura-case.git
 ```
 
 2. Após abrir o projeto em sua IDE de preferência, precisamos instalar as dependências do projeto
@@ -65,6 +66,10 @@ npm watch:css
 Após seguir o passo a passo acima, se você estiver utilizando o `Live Server`, basta subir um novo servidor. 
 
 Caso você não utilize nenhuma extensão, basta você procurar onde salvou o projeto, copiar o caminho de onde o `index.html` está e colar no navegador.
+
+## Tecnologias adicionais
+Para manter a padronização do código, estou utilizando o [`prettier`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) e o [`eslint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+Se você estiver utilizando o `VSCode` é recomendado instalar as extensões dessas duas ferramentas.
 
 ## Visualização do projeto
 ![Visualização Desktop](./src/assets/screenshots/01.png)
@@ -97,7 +102,7 @@ Como todos os projetos desenvolvidos sempre aprendemos alguma coisa, seja positi
 4. Utilizar um backlog para gerenciar minhas tarefas.
 
 ### Postos de melhoria
-1. Não comecei o projeto com a técnica de Mobile First e depois precisei refatorar iniciando o layout com o mobile.
+1. Não comecei o projeto com a técnica de Mobile First e precisei refatorar iniciando o layout com o mobile posteriormente.
 2. Estudar mais sobre estilização do `input range` porque eu tive empecilhos na estilização dele.
 3. Poderia ter melhorado o modo de utilizar as classes com o `SASS`, essa tecnologia me oferece muitas coisas e poderia ter explorado mais e organizado melhor.
 4. Melhorado a implementação dos breakpoints.
