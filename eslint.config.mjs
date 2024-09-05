@@ -1,7 +1,7 @@
-import globals from 'globals'
-import pluginJs from '@eslint/js'
-import eslintPrettier from 'eslint-config-prettier'
-import prettierPlugin from 'eslint-plugin-prettier'
+import globals from 'globals';
+import pluginJs from '@eslint/js';
+import eslintPrettier from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   {
@@ -20,4 +20,4 @@ export default [
       prettier: prettierPlugin,
     },
   },
-]
+];

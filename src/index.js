@@ -8,47 +8,54 @@ const checkboxLowercaseEl = document.querySelector('#lowercase');
 const checkboxNumberEl = document.querySelector('#number');
 const checkboxSymbolEl = document.querySelector('#symbols');
 
-const lowercaseChars = 'abcçdefghijklmnopqrstuvwxyz';
-const uppercaseChars = 'ABCÇDEFGHIJKLMNOPQRSTUVWXYZ';
-const numberChars = '0123456789';
-const symbolChars = '!#$%&()*+,-./:;<=>?@[]^_{|}';
-
 let password = '';
 let passwordLength = 12;
 let baseChars = '';
 
-function generatePassword() {
+const CHAR_SETS = {
+  lowercase: 'abcçdefghijklmnopqrstuvwxyz',
+  uppercase: 'ABCÇDEFGHIJKLMNOPQRSTUVWXYZ',
+  number: '0123456789',
+  symbol: '!#$%&()*+,-./:;<=>?@[]^_{|}',
+};
+
+const generatePassword = () => {
   resetPassBeforeGenerate();
   setInputRangerValue();
   setPassword();
   calculatePasswordForce();
-}
+};
 
-function setPassword() {
+const setBaseChars = () => {
   baseChars = '';
 
   if (checkboxLowercaseEl.checked) {
-    baseChars += lowercaseChars;
+    baseChars += CHAR_SETS.lowercase;
   }
 
   if (checkboxUppercaseEl.checked) {
-    baseChars += uppercaseChars;
+    baseChars += CHAR_SETS.uppercase;
   }
 
   if (checkboxNumberEl.checked) {
-    baseChars += numberChars;
+    baseChars += CHAR_SETS.number;
   }
 
   if (checkboxSymbolEl.checked) {
-    baseChars += symbolChars;
+    baseChars += CHAR_SETS.symbol;
+  }
+};
+
+const setPassword = () => {
+  setBaseChars();
+
+  if (!baseChars) {
+    spanPasswordEl.classList.add('error');
+    return (spanPasswordEl.textContent =
+      'Personalize sua senha antes de gerar 🤖');
   }
 
-  if (!baseChars || baseChars.length === '') {
-    spanPasswordEl.classList.add("error");
-    return spanPasswordEl.textContent = "Personalize sua senha antes de gerar 🤖";
-  }
-
-  spanPasswordEl.classList.remove("error");
+  spanPasswordEl.classList.remove('error');
 
   for (let i = 0; i < passwordLength; i++) {
     const randomNumber = Math.floor(Math.random() * baseChars.length);
@@ -56,18 +63,15 @@ function setPassword() {
   }
 
   spanPasswordEl.textContent = password;
-}
+};
 
-function calculatePasswordForce() {
-  let checkedCount = 0;
-
-  checkboxesEl.forEach((checkbox) => {
-    if (checkbox.checked) {
-      checkedCount++;
-    }
-  })
+const calculatePasswordForce = () => {
+  const checkedCount = Array.from(checkboxesEl).filter(
+    (checkbox) => checkbox.checked
+  ).length;
 
   forceIndicatorEl.classList.remove('low', 'medium', 'strong');
+
   const DEFAULT_PASSWORD_LENGTH = 12;
   const MINIMIUM_ACCEPTABLE_PASSWORD_LENGTH = 18;
 
@@ -79,43 +83,41 @@ function calculatePasswordForce() {
     checkedCount === 3
   ) {
     forceIndicatorEl.classList.add('medium');
-  } else if (
-    passwordLength > MINIMIUM_ACCEPTABLE_PASSWORD_LENGTH &&
-    checkedCount === 4
-  ) {
+  } else {
     forceIndicatorEl.classList.add('strong');
   }
-}
+};
 
-function resetPassBeforeGenerate() {
-  password = '';
-}
-
-function copyPassword() {
+const copyPassword = () => {
   const notificationEl = document.querySelector('.notification');
-  notificationEl.classList.add("show");
+
+  notificationEl.classList.add('show');
 
   setTimeout(() => {
-  notificationEl.classList.remove("show");
+    notificationEl.classList.remove('show');
   }, 1200);
 
   return navigator.clipboard.writeText(spanPasswordEl.textContent);
-}
+};
 
-function setInputRangerValue() {
+const resetPassBeforeGenerate = () => {
+  password = '';
+};
+
+const setInputRangerValue = () => {
   passwordLength = inputRangeSliderEl.value;
   boxRangeSliderEl.textContent = passwordLength;
-}
+};
 
 inputRangeSliderEl.addEventListener('input', () => {
   setInputRangerValue();
   calculatePasswordForce();
   generatePassword();
-})
+});
 
 checkboxesEl.forEach((checkbox) => {
   checkbox.addEventListener('change', calculatePasswordForce);
-})
+});
 
 checkboxUppercaseEl.addEventListener('click', generatePassword);
 checkboxLowercaseEl.addEventListener('click', generatePassword);
