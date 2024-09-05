@@ -1,8 +1,16 @@
 # Gerador de Senha
 
+<div style="display: flex; gap: 16px; align-items: center">
+    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
+    <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white"/>
+    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/livhelen12/alura-case.svg">
+</div>
+
 ## Conteúdo
 
 1. [Descrição do projeto](#descrição-do-projeto)
+   1. [Features](#features)
 2. [Pré-requisitos](#pré-requisitos)
    1. [Instalação do projeto](#instalação-do-projeto)
    2. [Instruções de uso](#instruções-de-uso)
@@ -19,11 +27,17 @@ O [gerador de senhas](https://alura-case-tau.vercel.app/) permite o usuário ger
 
 Esse projeto foi construído utilizando `HTML`, `SASS` e `JavaScript` como parte do caso de teste da Alura.
 
-<div style="display: flex; gap: 16px">
-    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
-    <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white"/>
-    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
-</div>
+## Features
+Funcionalidades desenvolvidas no projeto: 
+
+1. Letras maiúsculas
+2. Letras minúsculas
+3. Números
+4. Símbolos
+5. Barra de força da senha
+6. Copiar a senha
+7. Responsividade
+
 
 ## Pré-requisitos
 
