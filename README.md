@@ -27,7 +27,7 @@ O [gerador de senhas](https://alura-case-tau.vercel.app/) permite o usuário ger
 
 É possível acrescentar letras maiúsculas, minúsculas, símbolos, números, além de poder escolher o tamanho da senha. [O projeto pode ser visualizado clicando aqui](https://alura-case-tau.vercel.app/).
 
-Esse projeto foi construído utilizando `HTML`, `SASS` e `JavaScript` como parte do caso de teste da Alura.
+Esse projeto foi construído utilizando `HTML`, `SASS` e `JavaScript`.
 
 ## Features
 Funcionalidades desenvolvidas no projeto: 
